@@ -1,4 +1,4 @@
-/* CSS by Christina Carrasquilla, iteration by */
+/* CSS by Christina Carrasquilla, iteration by Abigail Arevalo */
 
 /* ===== Color Palette ===== 
 
@@ -17,7 +17,7 @@ body {
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
+    min-width: 0px;
     display:grid;
     grid-template-columns:1fr;
 }
@@ -103,9 +103,37 @@ footer {
 }
 
 /* ===== Media Query (Medium) ===== */
-/* write a media query for a screen with at least 800px */
-/* change the body's grid template to 1fr 300px */
-/* target the header, nav, and footer and style their grid-column to 1/-1 */
-/* target the nav and display it flex, spaceed around */
-/* target the .card-row to display flex */
-/* target the sections in .card-row witha width for 30% */
+@media screen and (min-width: 817px){
+    body {
+        grid-template-columns: 1fr 300px;
+    }
+    header, nav, footer {
+        grid-column: 1/-1;
+    }
+    nav {
+        display:flex;
+        justify-content:space-around;
+    }
+    nav ul {
+        display:flex;
+        justify-content:space-around;
+        width:100%;
+    }
+    nav li {
+        flex:1;
+    }
+    nav a {
+        border-left:none;
+        margin:0;
+        text-align:center;
+    }
+    .card-row {
+        display:flex;
+        justify-content:space-between;
+        gap:1rem;
+    }
+    .card-row section {
+        width:30%;
+        margin:0;
+    }
+}
